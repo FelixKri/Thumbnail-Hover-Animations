@@ -73,6 +73,8 @@ img{
     
     background: rgba(0,0,0,0.5);
 
+    transition: all ease-in-out 200ms;
+
 }
 
 .thumbnail{
@@ -92,25 +94,20 @@ img{
 
 .thumbnail:hover .top-to-bottom{
     transform: translateY(0);
-    transition: all ease-in-out 200ms;
 }
 .thumbnail:hover .bottom-to-top{
     transform: translateY(0);
-    transition: all ease-in-out 200ms;
 }
 
 .thumbnail:hover .right-to-left{
     transform: translateX(0);
-    transition: all ease-in-out 200ms;
 }
 
 .thumbnail:hover .left-to-right{
     transform: translateX(0);
-    transition: all ease-in-out 200ms;
 }
 
 .thumbnail:hover .explode-left{
-    transition: all ease-in-out 200ms;
     opacity: 1;
     width: 100%;
     height: 100%;
@@ -119,7 +116,6 @@ img{
 }
 
 .thumbnail:hover .explode-right{
-    transition: all ease-in-out 200ms;
     opacity: 1;
     width: 100%;
     height: 100%;
