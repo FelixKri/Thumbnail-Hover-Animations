@@ -1,0 +1,84 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.image{
+    position: relative;
+
+    margin: 3em;
+
+    height: 300px;
+    width: 300px;   
+
+    background: url(background.jpg);
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+.line{
+    opacity: 0;
+    transition: all ease-out 350ms;
+
+    position: absolute;
+    background-color: #fff;
+}
+
+.top{
+    height: 1px;
+    width: 1px;
+    
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom{
+    height: 1px;
+    width: 1px;
+
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left{
+    height: 1px;
+    width: 1px;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right{
+    height: 1px;
+    width: 1px;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image:hover .top{
+    height: 1px;
+    width: 90%;
+}
+
+.image:hover .bottom{
+    height: 1px;
+    width: 90%;
+}
+
+.image:hover .left{
+    width: 1px;
+    height: 90%;
+}
+
+.image:hover .right{
+    width: 1px;
+    height: 90%;
+}
+
+.image:hover .line{
+    opacity: 1;
+}
