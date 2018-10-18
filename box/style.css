@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 html, body{
     margin: 0;
     padding: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .image{
@@ -8,8 +12,8 @@ html, body{
 
     margin: 3em;
 
-    height: 300px;
-    width: 300px;   
+    height: 30vw;
+    width: 30vw;   
 
     background: url(background.jpg);
     background-size: cover;
@@ -19,10 +23,22 @@ html, body{
 
 .line{
     opacity: 0;
-    transition: all ease-out 350ms;
+    transition: all ease-in-out 350ms;
 
     position: absolute;
     background-color: #fff;
+}
+
+.caption{
+    opacity: 0;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all ease-in-out 350ms;
 }
 
 .top{
@@ -57,6 +73,10 @@ html, body{
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.image:hover .caption{
+    opacity: 1;
 }
 
 .image:hover .top{
