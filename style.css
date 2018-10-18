@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Core Styles */
+
 html, body{
     margin: 0;
     padding: 0;
@@ -12,6 +14,25 @@ h1{
     padding: 0;
 }
 
+/* Thumbnail Styles */
+
+.thumbnail{
+
+    background: #ffffff url("image.png") no-repeat right top;
+    background-size: cover;
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+
+    float: left;
+
+}
+
 .cover > h1{
     position: absolute;
     top: 50%;
@@ -20,15 +41,26 @@ h1{
     transform: translate(-50%, -50%);
 }
 
-img{
-    height: 200px;
-    width: auto;
+.cover{
+
+    font-size: 50%;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    transform-origin: center center;
+    
+    background: rgba(0,0,0,0.5);
+
+    transition: all ease-in-out 200ms;
+
 }
 
-#thumb1{
-    background: #ffffff url("image.png") no-repeat right top;
-    background-size: cover;
-}
+/* Initial Transition States */ 
 
 .top-to-bottom{
     transform: translateY(-100%);
@@ -60,37 +92,8 @@ img{
     transform: rotate(-45deg);
 }
 
-.cover{
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-
-    transform-origin: center center;
-    
-    background: rgba(0,0,0,0.5);
-
-    transition: all ease-in-out 200ms;
-
-}
-
-.thumbnail{
-
-    cursor: pointer;
-
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    width: 400px;
-
-    margin: 1em;
-
-    float: left;
-
-}
+/* Hover Transition States */
 
 .thumbnail:hover .top-to-bottom{
     transform: translateY(0);
@@ -120,17 +123,17 @@ img{
     width: 100%;
     height: 100%;
     transform: rotate(0);
-    transform: skew(-45deg);
+    transform: skew(135deg);
 }
 
 .thumbnail:hover .explode-left * {
     transform: skew(-45deg);
-    left: 25%;
-    top: 40%;
+    left: 30%;
+    top: 30%;
 }
 
 .thumbnail:hover .explode-right * {
     transform: skew(45deg);
-    left: 25%;
-    top: 40%;
+    left: 30%;
+    top: 30%;
 }
